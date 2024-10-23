@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://admin-n8kt.github.io/N8KT_Solutions/",
+  "homepage": "https://admin-n8kt.github.io/N8KT_Solutions/npm install --save gh-pages",
   "dependencies": {
     "@types/node": "^15.14.9",
     "@types/react": "^17.0.68",
@@ -10,7 +10,6 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.28",
     "antd": "^4.24.14",
-    "gh-pages": "^6.2.0",
     "i18next": "^19.9.2",
     "i18next-browser-languagedetector": "^6.1.8",
     "i18next-xhr-backend": "^3.2.2",
@@ -29,6 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  
+  
   "eslintConfig": {
     "extends": "react-app"
   },
