@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "n8ktsolutions.netlify.app",
+  "homepage": "https://n8kt-solutions.onrender.com/",
   "dependencies": {
     "@types/node": "^15.14.9",
     "@types/react": "^17.0.68",
