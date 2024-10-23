@@ -123,7 +123,7 @@ const Footer = ({ t }: { t: TFunction }) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="#"
+                href="https://github.com/Admin-N8KT"
                 src="github.svg"
               />
               <SocialLink
