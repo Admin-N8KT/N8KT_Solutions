@@ -89,12 +89,14 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Label htmlFor="select-lang">{t("Language")}</Label>
               <LanguageSwitchContainer>
                 <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
+                <SvgIcon
+                 src="India.svg"
+                 aria-label="homepage"
+                href="https://www.india.gov.in"  // Add the india.gov link here
+                width="30px"
+                 height="30px"
                   />
+
                 </LanguageSwitch>
                 <LanguageSwitch onClick={() => handleChange("es")}>
 
@@ -123,7 +125,7 @@ const Footer = ({ t }: { t: TFunction }) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Admin-N8KT"
+                href="https://www.linkedin.com/in/microsoft-google/"
                 src="github.svg"
               />
               <SocialLink
