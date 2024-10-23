@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://admin-n8kt.github.io/N8KT-Solutions",
+  "homepage": "https://admin-n8kt.github.io/N8KT_Solutions",
   "dependencies": {
     "@types/node": "^15.14.9",
     "@types/react": "^17.0.68",
