@@ -1,21 +1,52 @@
+import React from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
 import { useForm } from "../../common/utils/useForm";
 import validate from "../../common/utils/validationRules";
-import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  const { values, errors, handleChange } = useForm(validate);
+  const [submissionStatus, setSubmissionStatus] = React.useState("");
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
     return <Span>{ErrorMessage}</Span>;
+  };
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+
+    const formData = new FormData();
+    formData.append("email", values.email || "");
+    formData.append("full-name", values.name || "");
+    formData.append("message", values.message || "");
+    formData.append("_gotcha", ""); // Honeypot input
+
+    try {
+      const response = await fetch("https://getform.io/f/bkkkgpyb", {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      setSubmissionStatus("Your message has been sent successfully!");
+      // Optionally reset the form values here
+    } catch (error) {
+      console.error("There was a problem with the submission:", error);
+      setSubmissionStatus("There was an error sending your message, please try again later.");
+    }
   };
 
   return (
@@ -41,7 +72,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </Col>
               <Col span={24}>
                 <Input
-                  type="text"
+                  type="email"
                   name="email"
                   placeholder="Your Email"
                   value={values.email || ""}
@@ -59,8 +90,9 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="message" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
+                <button type="submit">{t("Submit")}</button>
               </ButtonContainer>
+              {submissionStatus && <div>{submissionStatus}</div>} {/* Display submission status */}
             </FormGroup>
           </Slide>
         </Col>

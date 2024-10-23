@@ -1,15 +1,25 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Dynamic, Scalable & Tailored Solutions",
+  "text": "As a dedicated startup enthusiast and freelance innovator, I specialize in crafting groundbreaking products for the startup ecosystem using the latest technologies. My unique methodology combines cloning and reverse engineering of successful applications, enabling startups to rapidly launch comprehensive, scalable, and fully customizable solutions that meet market demands without breaking the bank.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "Why Choose React Native?",
+      "content": "React Native empowers me to develop mobile applications that deliver a truly native performance experience, all while utilizing JavaScript. This ensures rapid iterations and a seamless development process, making it an ideal choice for dynamic startups.",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "The Power of Ant Design",
+      "content": "Ant Design provides a robust collection of React components that facilitate the creation of elegant, responsive interfaces straight out of the box. This allows for a polished user experience and accelerates the development timeline.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "The Advantage of Styled Components",
+      "content": "Styled Components grants me the flexibility to write scoped CSS directly within components, ensuring a harmonious blend of functionality and aesthetics. This level of control enhances the user interface, allowing for a unique look and feel tailored to your brand.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Embracing Modern Technologies",
+      "content": "By harnessing cutting-edge tools such as TypeScript, GraphQL, and serverless architectures, I ensure your product is not just innovative but also effortlessly scalable. This approach positions your startup to adapt and thrive in an ever-evolving digital landscape.",
       "icon": "notes.svg"
     }
   ]
