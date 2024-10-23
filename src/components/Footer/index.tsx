@@ -93,6 +93,7 @@ const Footer = ({ t }: { t: TFunction }) => {
                  src="India.svg"
                  aria-label="homepage"
                 href="https://www.india.gov.in"  // Add the india.gov link here
+                
                 width="30px"
                  height="30px"
                   />
